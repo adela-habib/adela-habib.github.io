@@ -15,7 +15,7 @@ technologies:
 links:
   - label: "Paper (J. Phys. Chem. A, 2023) — via Google Scholar"
     url: "https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en"
-  - label: "HIPPYNN example (repo path from CV)"
+  - label: "HIPPYNN example"
     url: "https://github.com/adela-habib/hippynn/tree/development/examples/MLElectronDynamics"
 ---
 

@@ -21,4 +21,4 @@ links:
 Developed and tested a real-time first-principles density matrix dynamics framework within relativistic DFT to study spin relaxation mechanisms in materials relevant to spintronics and solid-state qubits.
 
 ### Notes
-The original code repository is described as private in the CV; the publication record is linked via Google Scholar.
+The original code repository is private; the publication record is linked via Google Scholar.

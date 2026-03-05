@@ -20,5 +20,5 @@ links:
 ### Description
 Implemented a GPU-optimized iterative matrix inverse / inverse factorization solver in C++/CUDA with mixed precision on modern AI hardware.
 
-### Key outcome (from CV)
+### Key outcome 
 Achieved ~3× speedup compared to conventional solvers, supporting scalable quantum molecular dynamics and electronic-structure workflows.

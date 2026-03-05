@@ -21,7 +21,7 @@ links:
 ### Description
 Developed an approach to predict binding sites on protein-pair surfaces using coarse surface geometry graphs, a geometric transformer backbone, and protein large language model representations.
 
-### Results (from CV)
+### Results 
 - ~6× speedup relative to surface-based baselines.
 - ~8% accuracy improvement over state-of-the-art surface-based binding site identification models.
 

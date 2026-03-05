@@ -20,6 +20,10 @@ subtitle: "Selected publications and research outputs (see Google Scholar for th
     A. Habib, N. Lubbers, S. Tretiak, B. Nebgen. <em>J. Phys. Chem. A</em> 127(17) (2023).
   </li>
   <li>
+    <strong>Data generation for machine learning interatomic potentials and beyond</strong><br/>
+    M. Kulichenko, B. Nebgen, N. Lubbers, J. S. Smith, K. Barros, A. EA Allen, A. Habib, et al. <em>Chem. Reviews</em> 124 (24), 13681 (2024).
+  </li>
+  <li>
     <strong>Electric field and substrate dramatically accelerate spin relaxation in graphene</strong><br/>
     A. Habib, J. Xu, Y. Ping, R. Sundararaman. <em>Phys. Rev. B</em> 105(11) 115122 (2022).
   </li>

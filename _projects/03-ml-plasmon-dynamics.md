@@ -22,7 +22,7 @@ links:
 ### Description
 Built a physics-informed machine learning time-series model to predict electron trajectories in metal nanoparticles. The model is designed as a fast surrogate for expensive real-time first-principles approaches.
 
-### Key outcome (from CV)
+### Key outcome 
 Achieved ~10,000× speedup compared to rt-TDDFT-style methods while capturing relevant charge dynamics.
 
 ### Technologies used

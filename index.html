@@ -3,69 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Adela Habib — computational scientist (computational physics/chemistry, AI/ML for science, HPC optimization)." />
   <title>Adela Habib | Computational Scientist</title>
+  <meta name="description" content="Adela Habib — computational physics & chemistry, AI/ML for science, and HPC optimization." />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Font Awesome for social icons (works on GitHub Pages) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
+<body>
   <header class="site-header" id="top">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top">AH</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <div class="nav-links" id="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#skills">Skills</a>
-        <a href="#talks">Talks</a>
-        <a href="#contact">Contact</a>
-      </div>
+    <nav class="nav container">
+      <a class="brand" href="#home">AH</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main id="main">
+  <main>
     <!-- HERO -->
-    <section class="section hero" aria-label="Intro">
+    <section class="section hero" id="home">
       <div class="container hero-grid">
         <div>
-          <p class="kicker">Computational Scientist • Postdoctoral Fellow @ Los Alamos National Laboratory</p>
+          <p class="eyebrow">Postdoctoral Fellow • Los Alamos National Laboratory</p>
           <h1>Adela Habib</h1>
-          <p class="lede">
-            I build scalable, physics-grounded AI/ML and high-performance computing (HPC) methods for
-            materials design, molecular simulation, and scientific discovery.
+          <p class="lead">
+            Computational scientist specializing in computational physics and chemistry, accelerated AI/ML methods for science,
+            HPC optimization, and scalable models for materials design.
           </p>
+
           <div class="cta-row">
-            <a class="btn primary" href="#projects">View projects</a>
-            <a class="btn" href="assets/AdelaHabib_Resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
           </div>
-          <div class="social" aria-label="Social links">
-            <a href="https://www.linkedin.com/in/adela-habib/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+
+          <div class="social-row" aria-label="External profiles">
+            <a class="icon-link" href="https://www.linkedin.com/in/adela-habib/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <img src="assets/img/linkedin.svg" alt="LinkedIn" />
             </a>
-            <a href="https://github.com/adela-habib" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <a class="icon-link" href="https://github.com/adela-habib" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <img src="assets/img/github.svg" alt="GitHub" />
             </a>
-            <a href="https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <a class="icon-link" href="https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+              <img src="assets/img/scholar.svg" alt="Google Scholar" />
             </a>
           </div>
         </div>
 
-        <aside class="card" aria-label="At a glance">
-          <h2 class="h3">At a glance</h2>
-          <ul class="bullets">
-            <li>Computational physics & chemistry (DFT, MD, real-time density matrix dynamics)</li>
-            <li>AI/ML for science (GNNs, geometric transformers, diffusion/flow models)</li>
+        <div class="hero-card">
+          <h2 class="h3">Focus areas</h2>
+          <ul class="checklist">
+            <li>AI/ML for molecular & materials modeling (GNNs, transformers, diffusion)</li>
+            <li>Computational chemistry & physics (DFT, MD, real-time density matrix dynamics)</li>
             <li>GPU/HPC optimization (CUDA, MPI, mixed precision, tensor cores)</li>
-            <li>Materials discovery + protein interaction modeling</li>
           </ul>
-        </aside>
+        </div>
       </div>
     </section>
 
@@ -73,70 +73,87 @@
     <section class="section" id="about">
       <div class="container">
         <h2>About</h2>
-        <p class="summary">
-          Overview of my research focus and what I enjoy working on: combining first-principles simulations,
-          machine learning, and scalable computing to accelerate scientific discovery.
-        </p>
-        <div class="grid-2">
-          <div>
-            <p>
-              I am a Postdoctoral Research Fellow at Los Alamos National Laboratory working across the
-              Bioscience and Theoretical divisions. My interests center on building accelerated AI/ML methods
-              and high-performance simulation workflows for materials discovery and biomolecular applications.
-            </p>
-            <p>
-              I particularly enjoy projects that connect rigorous physics/chemistry with practical software:
-              from GPU-optimized numerical linear algebra to graph neural networks that learn force fields or
-              time-dependent electron dynamics.
-            </p>
-          </div>
-          <div class="callout">
-            <h3>Research interests</h3>
-            <ul>
-              <li>AI agents for materials discovery (literature → simulation → validation loop)</li>
-              <li>Geometric deep learning & protein language models for protein interaction prediction</li>
-              <li>Machine-learned interatomic potentials / force fields</li>
-              <li>Real-time electronic/spin dynamics from first principles</li>
-              <li>Mixed-precision GPU algorithms for electronic structure calculations</li>
-            </ul>
-          </div>
+        <div class="two-col">
+          <p>
+            I’m a postdoctoral research fellow at Los Alamos National Laboratory working at the intersection of
+            computational physics/chemistry and machine learning. My work centers on building accurate and scalable
+            simulation and ML pipelines—from first-principles electronic structure to data-driven interatomic potentials
+            and agentic workflows that automate scientific tasks.
+          </p>
+          <p>
+            I’m especially interested in accelerated scientific computing on modern hardware (GPUs / mixed precision)
+            and in physics-informed ML that can provide orders-of-magnitude speedups while preserving interpretability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>AI / Machine Learning</h3>
+            <p>Transformers, GNNs/EGNNs, CNNs/RNNs, autoencoders/VAEs, diffusion models, flow matching, active learning & automated sampling.</p>
+            <div class="tags">
+              <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Computational Physics & Chemistry</h3>
+            <p>DFT (ground & excited states), MP2, molecular dynamics, real-time density matrix dynamics.</p>
+            <div class="tags">
+              <span>VASP</span><span>Quantum ESPRESSO</span><span>ORCA</span><span>LAMMPS</span><span>ASE</span><span>GPAW</span><span>JDFTx</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>HPC & Optimization</h3>
+            <p>GPU-accelerated computing on NVIDIA tensor cores and AMD matrix cores (ROCm), MPI parallelism, mixed precision algorithms.</p>
+            <div class="tags">
+              <span>C++</span><span>CUDA</span><span>MPI</span><span>Linux</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="section alt" id="experience">
+    <section class="section" id="experience">
       <div class="container">
         <h2>Experience</h2>
-        <p class="summary">
-          Roles and responsibilities with emphasis on research outcomes, software, and impact.
-        </p>
 
         <div class="timeline">
           <article class="timeline-item">
-            <div class="time">2021 — Present</div>
-            <div class="content">
-              <h3>Postdoctoral Research Fellow — Los Alamos National Laboratory</h3>
-              <p class="meta">Bioscience & Theoretical Divisions • Los Alamos, NM</p>
+            <div class="timeline-meta">
+              <div class="role">Postdoctoral Research Fellow</div>
+              <div class="org">Los Alamos National Laboratory (Bioscience & Theoretical Divisions)</div>
+              <div class="dates">2021 — Present</div>
+            </div>
+            <div class="timeline-body">
               <ul>
-                <li>Developing agentic workflows for materials discovery integrating literature search, MD/DFT simulations, and automated validation.</li>
-                <li>Protein interaction modeling: coarse surface graphs + geometric transformers + protein LLMs for binding site prediction (speed/accuracy improvements over prior surface-based methods).</li>
-                <li>Physics-informed ML for electron dynamics in nanoparticles (GNN time-series models; orders-of-magnitude acceleration over rt-TDDFT).</li>
-                <li>GPU-accelerated numerical methods for quantum molecular dynamics (mixed-precision inverse overlap / factorization on tensor cores).</li>
+                <li>Developing AI-agentic workflows to close the loop for materials discovery (literature → simulations → reasoning-based review).</li>
+                <li>Coupling protein language models with geometric deep learning for protein–protein binding site prediction.</li>
+                <li>Physics-informed ML for plasmon/charge dynamics in metal nanoparticles with ~10,000× speedup over rt-TDDFT.</li>
+                <li>GPU-optimized numerical methods for quantum molecular dynamics (mixed precision inverse factorization on tensor cores).</li>
               </ul>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="time">2017 — 2021</div>
-            <div class="content">
-              <h3>Ph.D. Research Assistant — Rensselaer Polytechnic Institute</h3>
-              <p class="meta">Sundararaman Group • Troy, NY</p>
+            <div class="timeline-meta">
+              <div class="role">Ph.D. Research Assistant</div>
+              <div class="org">Rensselaer Polytechnic Institute (Sundararaman Group)</div>
+              <div class="dates">2017 — 2021</div>
+            </div>
+            <div class="timeline-body">
               <ul>
-                <li>Real-time first-principles density matrix dynamics framework within relativistic DFT (MPI/CUDA/C++).</li>
-                <li>Ab initio spin dynamics for spintronics and solid-state qubits (e.g., graphene, MoS₂).</li>
-                <li>DFT-driven models for hot-carrier transport at metal–semiconductor interfaces.</li>
-                <li>Light–matter interaction modeling in photonic crystals; explored ML-accelerated alternatives to conventional EM solvers.</li>
+                <li>Built real-time first-principles density matrix dynamics in relativistic DFT for spin dynamics (MPI, CUDA, C++).</li>
+                <li>DFT-driven models for electron injection across metal–semiconductor interfaces (photodetection/energy harvesting).</li>
+                <li>ML-assisted models for light–matter interaction in photonic crystals achieving ~100× speedup over conventional methods.</li>
               </ul>
             </div>
           </article>
@@ -145,223 +162,147 @@
     </section>
 
     <!-- PROJECTS -->
-    <section class="section" id="projects">
+    <section class="section alt" id="projects">
       <div class="container">
         <h2>Projects</h2>
-        <p class="summary">
-          Selected research and software projects. Each entry includes a short description, technologies used,
-          and relevant links/media.
-        </p>
+        <p class="muted">Selected technical projects. Each includes a short description, technologies used, and relevant links (public when available).</p>
 
         <div class="cards">
-          <article class="card project">
-            <h3>URSA — Agentic workflow for scientific simulation (LAMMPS agent)</h3>
+          <article class="card">
+            <h3>Machine learning models for plasmon dynamics in Ag nanoparticles</h3>
             <p>
-              Building an AI-agent workflow to accelerate materials discovery by orchestrating tasks such as
-              literature search, molecular dynamics and DFT simulations, and results validation.
+              Physics-informed time-series ML model (GNN-based) to predict electron/charge trajectories in metal nanoparticles,
+              achieving ~10,000× speedup compared to real-time TDDFT.
             </p>
-            <p class="tags"><span>Python</span><span>LLMs/agents</span><span>LAMMPS</span><span>ASE</span><span>HPC</span></p>
-            <p class="links">
-              <a href="https://github.com/lanl/ursa/tree/lammps_agent" target="_blank" rel="noopener">Repository / lammps_agent</a>
-            </p>
+            <div class="tags"><span>PyTorch</span><span>GNNs</span><span>Physics-informed ML</span></div>
+            <div class="links">
+              <a href="https://doi.org/" target="_blank" rel="noreferrer">Publication (J. Phys. Chem. A, 2023)</a>
+              <a href="https://github.com/adela-habib/hippynn/tree/development/examples/MLElectronDynamics" target="_blank" rel="noreferrer">Code (HIPPYNN example)</a>
+            </div>
+            <p class="note">Note: DOI link placeholder—replace with the final DOI if desired.</p>
           </article>
 
-          <article class="card project">
-            <h3>HIPPYNN — ML electron dynamics (example workflow)</h3>
+          <article class="card">
+            <h3>Mixed-precision inverse overlap matrix factorization on GPUs</h3>
             <p>
-              Graph neural network models for predicting electron/charge trajectories in nanoparticles, enabling
-              large speedups compared to expensive real-time TDDFT simulations.
+              Implemented a GPU-optimized iterative inverse factorization solver using mixed precision on tensor cores,
+              delivering ~3× speedup over conventional solvers for electronic structure calculations.
             </p>
-            <p class="tags"><span>PyTorch</span><span>GNNs</span><span>Time-series</span><span>Scientific ML</span></p>
-            <p class="links">
-              <a href="https://github.com/adela-habib/hippynn/tree/development/examples/MLElectronDynamics" target="_blank" rel="noopener">Code example</a>
-            </p>
+            <div class="tags"><span>C++</span><span>CUDA</span><span>Mixed precision</span><span>HPC</span></div>
+            <div class="links">
+              <a href="https://pubs.acs.org/" target="_blank" rel="noreferrer">Publication (JCTC, 2024)</a>
+            </div>
+            <p class="note">Note: link points to publisher homepage—swap for the article URL/DOI.</p>
           </article>
 
-          <article class="card project">
-            <h3>JDFTx — Electronic structure code (contributor)</h3>
+          <article class="card">
+            <h3>Agentic workflow for materials discovery (URSA)</h3>
             <p>
-              Open-source C++/MPI electronic structure package. Contributed to features and workflows supporting
-              first-principles simulations relevant to materials and chemical physics.
+              Designed specialized AI agents that orchestrate literature search and simulation tools (e.g., MD/DFT via LAMMPS/ASE)
+              and review/correct outputs using reasoning mechanisms to accelerate the materials discovery loop.
             </p>
-            <p class="tags"><span>C++</span><span>MPI</span><span>DFT</span><span>HPC</span></p>
-            <p class="links">
-              <a href="https://github.com/shankar1729/jdftx" target="_blank" rel="noopener">GitHub repo</a>
-            </p>
+            <div class="tags"><span>Python</span><span>LLMs</span><span>ASE</span><span>LAMMPS</span></div>
+            <div class="links">
+              <a href="https://github.com/lanl/ursa/tree/lammps_agent" target="_blank" rel="noreferrer">URSA (lammps_agent branch)</a>
+            </div>
           </article>
 
-          <article class="card project">
-            <h3>FeynWann — Real-time density matrix dynamics (spin/charge)</h3>
+          <article class="card">
+            <h3>Protein interaction prediction with geometric deep learning + protein LLMs</h3>
             <p>
-              Real-time density matrix dynamics capabilities for spin dynamics and related transport problems.
-              (Repository referenced in resume; may be private.)
+              Developed a method to identify protein–protein binding sites using coarse surface geometry graphs coupled with
+              geometric transformers and protein language models; reported ~6× speedup and ~8% accuracy improvement vs. prior surface-based models.
             </p>
-            <p class="tags"><span>C++</span><span>MPI</span><span>Python</span><span>Electronic structure</span></p>
-            <p class="links">
-              <span class="muted">Link: private repository (per resume)</span>
-            </p>
+            <div class="tags"><span>PyTorch</span><span>PyTorch Geometric</span><span>Geometric transformers</span><span>Protein LLMs</span></div>
+            <div class="links">
+              <span class="muted">Code private (LANL GitLab). Manuscript in preparation.</span>
+            </div>
           </article>
 
-          <article class="card project">
-            <h3>InvFactorize — GPU mixed-precision inverse factorization</h3>
+          <article class="card">
+            <h3>Machine-learned force fields for ionic liquids</h3>
             <p>
-              GPU-optimized iterative matrix inverse/factorization solver using tensor cores; improves performance
-              for overlap-matrix inversion in quantum molecular dynamics and electronic structure.
+              Built a graph-neural interatomic potential using active learning and ensemble uncertainty; enabled large-scale MD
+              simulations of complex ionic liquids (up to million-atom regimes).
             </p>
-            <p class="tags"><span>C++</span><span>CUDA</span><span>Mixed precision</span><span>Tensor cores</span></p>
-            <p class="links">
-              <span class="muted">Link: private repo (per resume)</span>
-            </p>
+            <div class="tags"><span>GNNs</span><span>Active learning</span><span>MD</span><span>LAMMPS</span></div>
+            <div class="links">
+              <span class="muted">Manuscript under preparation.</span>
+            </div>
           </article>
 
-          <article class="card project">
-            <h3>SurfGraphProtein — Protein interaction prediction on surfaces</h3>
+          <article class="card">
+            <h3>JDFTx & scientific software contributions</h3>
             <p>
-              Surface-geometry graphs + geometric transformers and protein language models for binding site
-              prediction on protein–protein interfaces.
+              Contributed to open-source electronic structure tooling and associated workflows; experience with C++/MPI scientific codebases.
             </p>
-            <p class="tags"><span>PyTorch</span><span>PyTorch Geometric</span><span>Geometric DL</span><span>Protein LMs</span></p>
-            <p class="links">
-              <span class="muted">Link: private repo (per resume)</span>
-            </p>
+            <div class="tags"><span>C++</span><span>MPI</span><span>Electronic structure</span></div>
+            <div class="links">
+              <a href="https://github.com/shankar1729/jdftx" target="_blank" rel="noreferrer">JDFTx</a>
+              <a href="https://github.com/shankar1729/FeynWann" target="_blank" rel="noreferrer">FeynWann</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- PUBLICATIONS -->
-    <section class="section alt" id="publications">
+    <section class="section" id="publications">
       <div class="container">
         <h2>Selected publications</h2>
-        <p class="summary">
-          A short list from Google Scholar / resume. For the full list, visit my Scholar profile.
-        </p>
-        <p>
-          <a class="btn" href="https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en" target="_blank" rel="noopener">
-            View full publication list
-          </a>
-        </p>
+        <p class="muted">A short selection from Google Scholar. For the full list, see the Scholar profile.</p>
 
-        <ol class="pubs">
-          <li>
-            <span class="pub-title">Efficient mixed-precision matrix factorization of the inverse overlap matrix in electronic structure calculations with AI-Hardware and GPUs</span>
-            <span class="pub-meta">J. Chem. Theory Comput. (2024)</span>
-          </li>
-          <li>
-            <span class="pub-title">Machine learning models capture plasmon dynamics in Ag nanoparticles</span>
-            <span class="pub-meta">J. Phys. Chem. A (2023)</span>
-          </li>
-          <li>
-            <span class="pub-title">Electric field and substrate dramatically accelerate spin relaxation in graphene</span>
-            <span class="pub-meta">Phys. Rev. B (2022)</span>
-          </li>
-          <li>
-            <span class="pub-title">Spin-phonon relaxation from a universal ab initio density matrix approach</span>
-            <span class="pub-meta">Nature Communications (2020)</span>
-          </li>
-          <li>
-            <span class="pub-title">Coupled electromagnetic and reaction kinetics simulation of super-resolution interference lithography</span>
-            <span class="pub-meta">J. Phys. Chem. B (2020)</span>
-          </li>
+        <ol class="pub-list">
+          <li>Habib, A. et al. <em>Efficient mixed-precision matrix factorization of the inverse overlap matrix in electronic structure calculations with AI-Hardware and GPUs</em>. J. Chem. Theory Comput. (2024).</li>
+          <li>Habib, A. et al. <em>Machine learning models capture plasmon dynamics in Ag nanoparticles</em>. J. Phys. Chem. A (2023).</li>
+          <li>Habib, A. et al. <em>Electric field and substrate dramatically accelerate spin relaxation in graphene</em>. Phys. Rev. B (2022).</li>
+          <li>Xu, J.; Habib, A. et al. <em>Spin-phonon relaxation from a universal ab initio density matrix approach</em>. Nat. Communications (2020).</li>
+          <li>Tagliabue, G.; Habib, A. et al. <em>Ultrafast hot-hole injection modifies hot-electron dynamics in Au/p-GaN heterostructures</em>. Nat. Materials (2020).</li>
         </ol>
-        <p class="fineprint">
-          Note: Titles/journals/years are pulled from the provided resume excerpt. Please verify/correct any details before publishing.
-        </p>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <p class="summary">
-          Technical toolkit across AI/ML, computational physics/chemistry, software engineering, and HPC.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>AI/ML</h3>
-            <ul>
-              <li>Transformers, geometric transformers</li>
-              <li>GNNs / EGNNs / SchNet-like models</li>
-              <li>CNNs, RNNs, VAEs, diffusion models, flow matching</li>
-              <li>Active learning, automated sampling</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Comp. physics & chemistry</h3>
-            <ul>
-              <li>DFT (ground & excited states), MP2</li>
-              <li>Molecular dynamics (MD)</li>
-              <li>Real-time density matrix dynamics</li>
-              <li>Electronic/spin transport & relaxation</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Programming & HPC</h3>
-            <ul>
-              <li>Python (PyTorch, TensorFlow, scikit-learn)</li>
-              <li>C++, CUDA, MPI</li>
-              <li>Linux/Unix, LaTeX</li>
-              <li>GPU acceleration (NVIDIA tensor cores; AMD matrix cores/ROCm)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top: 1rem;">
-          <h3>Scientific software</h3>
-          <p class="tags">
-            <span>VASP</span><span>Quantum Espresso</span><span>ORCA</span><span>LAMMPS</span><span>ASE</span><span>GPAW</span><span>JDFTx</span><span>OpenMM</span><span>GROMACS</span><span>DFTB+</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TALKS -->
-    <section class="section alt" id="talks">
-      <div class="container">
-        <h2>Talks & presentations</h2>
-        <p class="summary">Recent invited and contributed talks listed on my resume.</p>
-        <ul class="talks">
-          <li><strong>Keystone Symposia (2025):</strong> Coupled protein language models and geometric deep learning for protein interaction prediction on dynamically sampled surfaces.</li>
-          <li><strong>SFA2F Meeting (2025):</strong> AI-driven approaches for prediction of protein interactions.</li>
-          <li><strong>Telluride Science Research Center (2023):</strong> ML-enabled electron dynamics in metal nanoparticles (invited).</li>
-          <li><strong>LANL/CNLS (2022):</strong> Atomistic simulation of plasmonic hot carrier dynamics using machine learning (invited).</li>
-        </ul>
+        <a class="inline-link" href="https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en" target="_blank" rel="noreferrer">View Google Scholar →</a>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section" id="contact">
+    <section class="section alt" id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <p class="summary">How to reach me and where to find my work online.</p>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Email</h3>
-            <p><a href="mailto:adelahanihabib@gmail.com">adelahanihabib@gmail.com</a></p>
-            <p class="muted">(Preferred for collaborations and speaking invitations.)</p>
+        <div class="contact-grid">
+          <div>
+            <p>
+              Best way to reach me: <a href="mailto:adelahanihabib@gmail.com">adelahanihabib@gmail.com</a>
+            </p>
+            <p class="muted">You can also find me on these platforms:</p>
+            <div class="social-row">
+              <a class="icon-link" href="https://www.linkedin.com/in/adela-habib/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+              </a>
+              <a class="icon-link" href="https://github.com/adela-habib" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <img src="assets/img/github.svg" alt="GitHub" />
+              </a>
+              <a class="icon-link" href="https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+                <img src="assets/img/scholar.svg" alt="Google Scholar" />
+              </a>
+            </div>
           </div>
-          <div class="card">
-            <h3>Online</h3>
-            <ul class="link-list">
-              <li><i class="fa-brands fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/adela-habib/" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><i class="fa-brands fa-github" aria-hidden="true"></i> <a href="https://github.com/adela-habib" target="_blank" rel="noopener">GitHub</a></li>
-              <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <a href="https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
-            </ul>
+
+          <div class="contact-card">
+            <h3 class="h4">Download</h3>
+            <p class="muted">If you want, add a PDF version of your resume at <code>assets/AdelaHabib_Resume.pdf</code> and enable the link below.</p>
+            <a class="btn btn-ghost" href="AdelaHabib_Resume.pdf" target="_blank" rel="noreferrer">View resume (PDF)</a>
           </div>
         </div>
-
-        <footer class="site-footer">
-          <div class="container footer-inner">
-            <p>© <span id="year"></span> Adela Habib.</p>
-            <a class="back-to-top" href="#top">Back to top</a>
-          </div>
-        </footer>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Adela Habib</span>
+      <a class="inline-link" href="#top">Back to top</a>
+    </div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>

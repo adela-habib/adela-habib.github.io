@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    {% seo %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="name"><a href="{{ '/' | relative_url }}" style="color: inherit; text-decoration: none;">{{ site.title }}</a></div>
+          <div class="tagline">{{ site.description }}</div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          {% for item in site.nav %}
+            {% assign active = false %}
+            {% if page.url == item.url %}{% assign active = true %}{% endif %}
+            {% if item.url != '/' and page.url contains item.url %}{% assign active = true %}{% endif %}
+            <a href="{{ item.url | relative_url }}" class="{% if active %}active{% endif %}">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      {{ content }}
+
+      <footer class="footer">
+        <div>
+          <span class="meta">© {{ 'now' | date: '%Y' }} {{ site.author.name }} · Built with Jekyll · Hosted on GitHub Pages</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

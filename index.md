@@ -49,7 +49,6 @@ permalink: /
     <h2 style="margin-top:14px;">Contact</h2>
     <p style="margin: 0; color: var(--muted);">
       Email: <a href="mailto:adelahanihabib@gmail.com">adelahanihabib@gmail.com</a><br/>
-      Location: Los Alamos, NM
     </p>
   </div>
 </section>

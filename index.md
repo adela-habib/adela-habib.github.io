@@ -9,7 +9,6 @@ permalink: /
   <p>
     Computational scientist specializing in <strong>AI/ML for science</strong>, computational physics/chemistry,
     and <strong>HPC optimization</strong> for scalable simulation and model development.
-    I currently work as a Postdoctoral Fellow at Los Alamos National Laboratory.
   </p>
 
   {% include icons.html %}

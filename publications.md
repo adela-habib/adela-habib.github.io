@@ -39,7 +39,9 @@ subtitle: "Selected publications and research outputs (see Google Scholar for th
 
 <h2>Software</h2>
 <ul>
+  <li><a href="https://github.com/lanl/ursa/tree/lammps_agent" target="_blank" rel="noopener noreferrer">URSA — agentic workflow (contributor/developer)</a></li>
+  <li><a href="https://github.com/adela-habib/hippynn/tree/development/examples/MLElectronDynamics" target="_blank" rel="noopener noreferrer">HIPPYNN (developer)</a></li>
   <li><a href="https://github.com/shankar1729/jdftx" target="_blank" rel="noopener noreferrer">JDFTx</a> (contributor/developer)</li>
-  <li><a href="https://github.com/shankar1729/FeynWann" target="_blank" rel="noopener noreferrer">FeynWann</a> (private repository mentioned in CV)</li>
-  <li><a href="https://github.com/lanl/ursa/tree/lammps_agent" target="_blank" rel="noopener noreferrer">URSA — agentic workflow</a></li>
+  <li><a href="https://github.com/shankar1729/FeynWann" target="_blank" rel="noopener noreferrer">FeynWann</a> (contributor/developer, private repository)</li>
+  
 </ul>

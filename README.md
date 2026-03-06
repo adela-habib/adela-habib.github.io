@@ -1,46 +1,31 @@
-# Adela Habib — Personal Website (Jekyll + GitHub Pages)
+# Adela Habib — Personal Website (Jekyll)
 
-This repository contains a Jekyll website designed for GitHub Pages hosting.
+This repository contains a Jekyll website intended for **GitHub Pages**.
 
-## Local development (view the site)
+## Quick start (local)
 
-### Option A: Using GitHub Pages gem (recommended)
-1. Install Ruby (and Bundler).
-2. In the repo root:
-   ```bash
-   bundle install
-   bundle exec jekyll serve
-   ```
-3. Open: http://localhost:4000
+1. Install Ruby + Bundler.
+2. From the repo root:
 
-### Option B: Vanilla Jekyll
-If you already have Jekyll installed:
 ```bash
-jekyll serve
+bundle install
+bundle exec jekyll serve
 ```
 
+3. Open: http://localhost:4000
+
 ## Deploy (GitHub Pages)
-- Push this repository to GitHub.
-- In **Settings → Pages**, set the source to the `main` branch (root).
-- GitHub Pages will build the Jekyll site automatically.
 
-## Site structure
-- `index.md`: landing page
-- `projects.md`: project index
-- `_projects/`: individual project pages (Markdown)
-- `publications.md`: selected publications + scholar link
-- `cv.md`: resume page (downloads `assets/AdelaHabib_Resume.pdf`)
-- `_layouts/`, `_includes/`, `assets/css/style.css`: theme/layout
+- Push to GitHub.
+- In **Settings → Pages** choose:
+  - **Source:** Deploy from a branch
+  - **Branch:** `main` (or `master`) and `/ (root)`
 
-## Navigation
-Use the top navigation bar:
-- **Home**: overview + featured projects
-- **Projects**: selected projects with technologies and links
-- **Publications**: selected papers + Google Scholar
-- **CV**: resume PDF + highlights
+GitHub Pages will build and host the site.
 
-## Social icons
-The home page includes icons linking to:
-- LinkedIn: https://www.linkedin.com/in/adela-habib/
-- GitHub: https://github.com/adela-habib
-- Google Scholar: https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en
+## Customize
+
+- Profile photo: `assets/img/profile.jpg`
+- Site configuration: `_config.yml`
+- Main page content: `index.html`
+- Styles: `assets_css_styles.css`

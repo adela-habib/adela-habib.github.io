@@ -1,0 +1,247 @@
+---
+layout: default
+title: Home
+---
+
+{% include icons.html %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span> Computational scientist · AI/ML · Computational physics/chemistry · HPC</div>
+      <h1>Adela Habib</h1>
+      <p class="sub">
+        Postdoctoral Fellow at Los Alamos National Laboratory. I build accelerated, scalable models and workflows for
+        materials discovery, molecular simulation, and data-driven physics—combining geometric deep learning, modern
+        generative models, and high-performance computing.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">Explore projects</a>
+        <a class="btn" href="#publications">View publications</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+
+      <div class="pills" style="margin-top:16px;">
+        <span class="pill">Transformers</span>
+        <span class="pill">GNNs / EGNNs</span>
+        <span class="pill">Diffusion / Flow Matching</span>
+        <span class="pill">DFT · MD</span>
+        <span class="pill">CUDA · MPI</span>
+        <span class="pill">GPU optimization</span>
+      </div>
+    </div>
+
+    <div class="card profile">
+      <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Portrait of Adela Habib" />
+      <div class="socials" aria-label="Social links">
+        <a class="icon-btn" href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ icon_linkedin }}</a>
+        <a class="icon-btn" href="{{ site.social.github }}" target="_blank" rel="noopener" aria-label="GitHub">{{ icon_github }}</a>
+        <a class="icon-btn" href="{{ site.social.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">{{ icon_scholar }}</a>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-weight:800;">Los Alamos National Laboratory</div>
+        <div class="meta">Los Alamos, New Mexico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container grid-2">
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        I’m a computational scientist focused on building reliable, fast scientific ML systems and physics-based simulation
+        methods. My work spans quantum chemistry and electronic-structure theory, molecular dynamics, time-dependent
+        charge and spin dynamics, and GPU-accelerated numerical linear algebra.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Core strengths</h2>
+      <div class="pills">
+        <span class="pill">Scientific ML for atoms, materials, and proteins</span>
+        <span class="pill">Active learning + uncertainty</span>
+        <span class="pill">HPC kernels (CUDA, tensor cores)</span>
+        <span class="pill">Agentic workflows for simulation + literature</span>
+        <span class="pill">Real-time density matrix dynamics</span>
+        <span class="pill">DFT / excited-state methods</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="container">
+    <div class="card">
+      <h2>Research</h2>
+      <p>
+        I develop accelerated approaches for scientific discovery across materials and biomolecular systems.
+        Recent directions include agentic workflows that connect literature search to simulation and validation,
+        geometric deep learning for protein interaction modeling, physics-informed ML for charge dynamics in nanoparticles,
+        and GPU-optimized solvers for electronic-structure calculations.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Selected projects</h2>
+
+    <div class="grid-2">
+      <div class="card item">
+        <h3>Materials discovery AI agentic workflow</h3>
+        <div class="meta">AI agents · Simulation automation · Validation loops</div>
+        <p>
+          Designing AI agents that close the materials discovery loop—from extracting evidence in papers to launching
+          molecular dynamics and density functional theory calculations for property prediction, then reviewing/correcting
+          outcomes via reasoning and tool feedback.
+        </p>
+        <div class="pills">
+          <span class="pill">Python</span><span class="pill">LLMs</span><span class="pill">ASE</span><span class="pill">LAMMPS</span><span class="pill">DFT</span>
+        </div>
+        <div class="links">
+          <a class="small-link" href="https://github.com/lanl/ursa/tree/lammps_agent" target="_blank" rel="noopener">URSA (agentic workflow)</a>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>Protein binding-site prediction with geometric deep learning + protein language models</h3>
+        <div class="meta">Surface graphs · Geometric transformers · Efficient inference</div>
+        <p>
+          Developed a binding-site prediction approach that couples coarse surface geometry graphs with geometric
+          transformer models and protein language model embeddings. The method targets fast, scalable predictions for
+          protein–protein interaction interfaces.
+        </p>
+        <div class="pills">
+          <span class="pill">PyTorch</span><span class="pill">PyTorch Geometric</span><span class="pill">Transformers</span><span class="pill">Protein LMs</span>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>Physics-informed ML for plasmon/charge dynamics in metal nanoparticles</h3>
+        <div class="meta">Time-series ML · Graph neural networks · 10,000× acceleration</div>
+        <p>
+          Built a physics-informed ML time-series model to predict electron trajectories in metal nanoparticles, enabling
+          dramatic speedups compared with real-time TDDFT while retaining the key dynamical signatures.
+        </p>
+        <div class="pills">
+          <span class="pill">PyTorch</span><span class="pill">GNNs</span><span class="pill">rt-TDDFT</span>
+        </div>
+        <div class="links">
+          <a class="small-link" href="https://github.com/adela-habib/hippynn/tree/development/examples/MLElectronDynamics" target="_blank" rel="noopener">HIPPYNN examples</a>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>Machine-learned force field for ionic liquids (million-atom MD)</h3>
+        <div class="meta">Active learning · Uncertainty · Large-scale molecular dynamics</div>
+        <p>
+          Developed a graph neural network force field with active learning sampling and ensemble uncertainty, enabling
+          molecular dynamics simulations of complex ionic liquids at the million-atom scale.
+        </p>
+        <div class="pills">
+          <span class="pill">GNNs</span><span class="pill">Active learning</span><span class="pill">MD</span>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>Mixed-precision GPU inverse factorization for electronic structure</h3>
+        <div class="meta">Numerical linear algebra · CUDA tensor cores · 3× speedup</div>
+        <p>
+          Implemented a GPU-optimized iterative matrix inverse solver using mixed precision on tensor-core hardware,
+          accelerating the inverse overlap matrix factorization used in electronic-structure workflows.
+        </p>
+        <div class="pills">
+          <span class="pill">C++</span><span class="pill">CUDA</span><span class="pill">MPI</span><span class="pill">Mixed precision</span>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>First-principles density-matrix dynamics for spintronics and solid-state qubits</h3>
+        <div class="meta">Relativistic DFT · Real-time dynamics · Spin relaxation</div>
+        <p>
+          Developed and tested a real-time density-matrix dynamics framework within relativistic DFT for studying spin
+          dynamics in materials such as graphene and MoS₂.
+        </p>
+        <div class="pills">
+          <span class="pill">C++</span><span class="pill">CUDA</span><span class="pill">MPI</span><span class="pill">DFT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3 style="margin:0 0 10px;">Project images</h3>
+      <p>
+        This site is set up to support project images under <code>assets/img/projects/</code>. Add image files there and link
+        them from each project card. (Some publishing sites block direct hotlinking; downloading images may require manual steps.)
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <h2>Publications (selected)</h2>
+
+    <div class="pub">
+      <div class="pub-title">Efficient mixed-precision matrix factorization of the inverse overlap matrix in electronic structure calculations with AI-Hardware and GPUs</div>
+      <div class="pub-venue">J. Chemical Theory and Computation, 2024 · A. Habib, J. Finkelstein, A. M. N. Niklasson</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Machine learning models capture plasmon dynamics in Ag nanoparticles</div>
+      <div class="pub-venue">J. Physical Chemistry A, 2023 · A. Habib, N. Lubbers, S. Tretiak, B. Nebgen</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Electric field and substrate dramatically accelerate spin relaxation in graphene</div>
+      <div class="pub-venue">Physical Review B, 2022 · A. Habib, J. Xu, Y. Ping, R. Sundararaman</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Ab initio ultrafast spin dynamics in solids</div>
+      <div class="pub-venue">Physical Review B, 2021 · J. Xu, A. Habib, Y. Ping, R. Sundararaman</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Spin-phonon relaxation from a universal ab initio density matrix approach</div>
+      <div class="pub-venue">Nature Communications, 2020 · J. Xu, A. Habib, S. Kumar, F. Wu, R. Sundararaman, Y. Ping</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Coupled electromagnetic and reaction kinetics simulation of super-resolution interference lithography</div>
+      <div class="pub-venue">J. Physical Chemistry B, 2020 · A. Habib, H. Vijayamohanan, C. Ullal, R. Sundararaman</div>
+    </div>
+
+    <div class="pub" style="margin-top:12px;">
+      <div class="pub-title">More publications</div>
+      <div class="pub-venue">
+        The full list is maintained on Google Scholar:
+        <a class="small-link" href="{{ site.social.scholar }}" target="_blank" rel="noopener">scholar profile</a>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container grid-2">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>
+        Email: <a class="small-link" href="mailto:adelahanihabib@gmail.com">adelahanihabib@gmail.com</a><br/>
+        Location: Los Alamos, New Mexico
+      </p>
+    </div>
+    <div class="card">
+      <h2>Links</h2>
+      <div class="links" style="display:flex; flex-direction:column; gap:10px;">
+        <a class="small-link" href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="small-link" href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>
+        <a class="small-link" href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </div>
+</section>

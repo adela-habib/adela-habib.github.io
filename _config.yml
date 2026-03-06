@@ -1,48 +1,21 @@
 title: "Adela Habib"
-description: "Computational scientist — AI/ML for materials & molecular science, computational physics/chemistry, and HPC optimization."
-url: ""
-baseurl: ""
-
-# GitHub Pages-compatible theme (we'll use our own layouts, but minima provides sane defaults)
-theme: minima
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
+description: "Computational scientist working at the intersection of machine learning, computational physics/chemistry, and high-performance computing."
+url: ""       # set to https://<username>.github.io in production
+baseurl: ""   # set to /<repo> if deploying as a project site
 
 markdown: kramdown
+kramdown:
+  input: GFM
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
+permalink: pretty
 
-defaults:
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: project
-
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "Projects"
-    url: "/projects/"
-  - title: "Publications"
-    url: "/publications/"
-  - title: "CV"
-    url: "/cv/"
-
-author:
-  name: "Adela Habib"
-  email: "adelahanihabib@gmail.com"
-
+# Social
 social:
   linkedin: "https://www.linkedin.com/in/adela-habib/"
   github: "https://github.com/adela-habib"
   scholar: "https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en"
 
-# SEO
-lang: en
+# Build
+exclude:
+  - README.md
+  - user_guide.md

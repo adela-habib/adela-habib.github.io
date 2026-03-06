@@ -1,10 +1,12 @@
-# Adela Habib — Personal Website (Jekyll)
+# Personal website (Jekyll)
 
-This repository contains a Jekyll website intended for **GitHub Pages**.
+This repository contains a Jekyll-based personal website for **Adela Habib**.
 
-## Quick start (local)
+## How to view locally
 
-1. Install Ruby + Bundler.
+### Option A (recommended): install Ruby + Bundler, then run Jekyll
+
+1. Install **Ruby** and **Bundler** (see https://jekyllrb.com/docs/installation/).
 2. From the repo root:
 
 ```bash
@@ -12,20 +14,29 @@ bundle install
 bundle exec jekyll serve
 ```
 
-3. Open: http://localhost:4000
+Then open: http://localhost:4000
 
-## Deploy (GitHub Pages)
+### Option B: view as static files
 
-- Push to GitHub.
-- In **Settings → Pages** choose:
-  - **Source:** Deploy from a branch
-  - **Branch:** `main` (or `master`) and `/ (root)`
+If you cannot run Jekyll locally, you can still browse the content by opening `_site/index.html` **after** running:
 
-GitHub Pages will build and host the site.
+```bash
+bundle exec jekyll build
+```
 
-## Customize
+## Site structure
 
-- Profile photo: `assets/img/profile.jpg`
-- Site configuration: `_config.yml`
-- Main page content: `index.html`
-- Styles: `assets_css_styles.css`
+- `index.md`: home page
+- `about.md`: bio + links
+- `projects.md`: projects index
+- `publications.md`: selected publications
+- `_projects/`: individual project pages (collection)
+- `_layouts/`: HTML layouts
+- `assets/css/site.css`: styling
+- `assets/img/`: images (profile photo + project covers)
+
+## Updating content
+
+- Add/edit projects: create a new markdown file in `_projects/` with front matter fields like `title`, `subtitle`, `tech`, `links`, `cover`.
+- Update social links in `_config.yml`.
+

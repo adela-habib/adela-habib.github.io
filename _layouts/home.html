@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="kicker">Computational Physics • Chemistry • AI/ML • HPC</div>
+    <h1 class="hero-title">Hi, I’m <span class="grad">Adela Habib</span>.</h1>
+    <p class="hero-sub">
+      I’m a computational scientist specializing in <strong>accelerated AI/ML methods for science</strong>,
+      <strong>computational physics & chemistry</strong> (DFT/MD/real-time dynamics), and
+      <strong>GPU/HPC optimization</strong> for scalable simulation and model building.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="{{ '/projects/' | relative_url }}">Explore projects</a>
+      <a class="btn" href="{{ '/publications/' | relative_url }}">View publications</a>
+    </div>
+
+    <div class="icon-row hero-icons">
+      <a aria-label="LinkedIn" class="icon" href="{{ site.social.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+      <a aria-label="GitHub" class="icon" href="{{ site.social.github }}"><i class="fa-brands fa-github"></i></a>
+      <a aria-label="Google Scholar" class="icon" href="{{ site.social.scholar }}"><i class="fa-solid fa-graduation-cap"></i></a>
+    </div>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <div class="mini-title">Current</div>
+        <div class="mini-text">Postdoctoral Fellow, Los Alamos National Laboratory</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-title">Focus</div>
+        <div class="mini-text">Materials discovery, charge/spin dynamics, protein interaction modeling</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-title">Toolbox</div>
+        <div class="mini-text">PyTorch, CUDA/MPI, DFT/MD stacks (VASP/QE/LAMMPS/ASE)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="profile">
+      <img class="profile-img" src="{{ site.assets.profile_photo | relative_url }}" alt="Profile photo" />
+      <div class="profile-glow"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Featured projects</h2>
+    <a class="link" href="{{ '/projects/' | relative_url }}">All projects →</a>
+  </div>
+
+  <div class="grid">
+    {% assign items = site.projects | sort: 'order' %}
+    {% for p in items limit: 6 %}
+      <a class="card" href="{{ p.url | relative_url }}">
+        <div class="card-top">
+          {% if p.cover %}
+            <img class="card-cover" src="{{ p.cover | relative_url }}" alt="{{ p.title }} cover">
+          {% else %}
+            <div class="card-cover placeholder"></div>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <h3>{{ p.title }}</h3>
+          {% if p.subtitle %}<p class="muted">{{ p.subtitle }}</p>{% endif %}
+          <p>{{ p.excerpt | strip_html | truncate: 140 }}</p>
+          {% if p.tech %}
+            <div class="tag-row">
+              {% for t in p.tech %}<span class="tag">{{ t }}</span>{% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

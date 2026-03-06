@@ -1,21 +1,42 @@
 title: "Adela Habib"
-description: "Computational scientist working at the intersection of machine learning, computational physics/chemistry, and high-performance computing."
-url: ""       # set to https://<username>.github.io in production
-baseurl: ""   # set to /<repo> if deploying as a project site
+description: "Computational scientist in physics & chemistry | AI/ML for science | HPC optimization | Materials & biomolecular modeling"
+url: "" # set on deploy
+baseurl: ""
 
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 permalink: pretty
 
-# Social
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+# Site identity
+author:
+  name: "Adela Habib"
+  email: "adelahanihabib@gmail.com"
+
 social:
   linkedin: "https://www.linkedin.com/in/adela-habib/"
   github: "https://github.com/adela-habib"
   scholar: "https://scholar.google.com/citations?user=yYTKXucAAAAJ&hl=en"
 
-# Build
-exclude:
-  - README.md
-  - user_guide.md
+assets:
+  profile_photo: "/assets/img/AdelaHabib_Photo.jpg"

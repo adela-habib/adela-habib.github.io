@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<article class="project">
+  <div class="project-head">
+    <div>
+      <h1 class="project-title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="project-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+      {% if page.tech %}
+      <div class="tag-row">
+        {% for t in page.tech %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+
+      {% if page.links %}
+      <div class="link-row">
+        {% for l in page.links %}
+          <a class="pill" href="{{ l.url }}">{{ l.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if page.cover %}
+      <img class="project-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }} cover" />
+    {% endif %}
+  </div>
+
+  <div class="content">
+    {{ content }}
+
+    {% if page.media %}
+      <hr />
+      <h2>Media</h2>
+      <div class="media-grid">
+        {% for m in page.media %}
+          <figure class="media-item">
+            <img src="{{ m.src | relative_url }}" alt="{{ m.alt }}" />
+            {% if m.caption %}<figcaption class="muted">{{ m.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

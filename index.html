@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adela Habib | Computational Scientist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rose:     #e8637a;
+    --rose-lt:  #f5a7b5;
+    --blush:    #fce8ec;
+    --lavender: #c5b3e6;
+    --lav-lt:   #ede8f9;
+    --gold:     #c9963a;
+    --gold-lt:  #f5e6c8;
+    --cream:    #fdf8f4;
+    --ink:      #2a1f2e;
+    --muted:    #7a6882;
+    --card-bg:  rgba(255,255,255,0.72);
+    --radius:   18px;
+  }
+ 
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  html { scroll-behavior: smooth; }
+ 
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+ 
+  /* ── BACKGROUND BLOBS ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -1;
+    background:
+      radial-gradient(ellipse 70% 60% at 10% 5%,  #f9d6df88 0%, transparent 60%),
+      radial-gradient(ellipse 60% 55% at 90% 10%, #ddd3f588 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 50% 90%, #f5e6c866 0%, transparent 60%),
+      var(--cream);
+  }
+ 
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 6vw;
+    background: rgba(253,248,244,0.82);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200,160,175,0.18);
+  }
+  nav .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600; font-size: 1.3rem;
+    color: var(--rose);
+    letter-spacing: .03em;
+  }
+  nav ul { list-style: none; display: flex; gap: 36px; }
+  nav a {
+    text-decoration: none;
+    font-size: .82rem; font-weight: 500;
+    color: var(--muted); letter-spacing: .08em; text-transform: uppercase;
+    transition: color .25s;
+  }
+  nav a:hover { color: var(--rose); }
+ 
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 6vw 80px;
+    position: relative;
+  }
+  .hero-inner { max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 80px; flex-wrap: wrap; }
+ 
+  .hero-text { flex: 1 1 340px; animation: fadeUp .9s ease both; }
+  .hero-tag {
+    display: inline-block;
+    background: var(--gold-lt); color: var(--gold);
+    font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 50px;
+    margin-bottom: 22px;
+  }
+  .hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5.2rem);
+    font-weight: 300; line-height: 1.08;
+    color: var(--ink);
+  }
+  .hero-text h1 em { font-style: italic; color: var(--rose); }
+  .hero-text p {
+    margin-top: 22px;
+    font-size: 1rem; line-height: 1.75;
+    color: var(--muted); max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 14px; margin-top: 38px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 28px; border-radius: 50px;
+    font-size: .85rem; font-weight: 500; text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--rose), #c0435c);
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(232,99,122,.35);
+  }
+  .btn-secondary {
+    background: var(--lav-lt);
+    color: var(--lavender);
+    border: 1.5px solid var(--lavender);
+  }
+  .btn-secondary:hover { background: var(--lavender); color: #fff; }
+ 
+  /* Avatar orb */
+  .hero-orb {
+    flex: 0 0 auto;
+    width: clamp(240px, 30vw, 360px);
+    aspect-ratio: 1;
+    border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
+    background: linear-gradient(135deg, var(--rose-lt), var(--lavender), var(--gold-lt));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 300; color: #fff;
+    box-shadow: 0 20px 60px rgba(197,179,230,.5);
+    animation: float 6s ease-in-out infinite, fadeUp .9s ease .2s both;
+    text-shadow: 0 2px 12px rgba(0,0,0,.15);
+    position: relative; overflow: hidden;
+  }
+  .hero-orb::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,.3) 0%, transparent 60%);
+  }
+ 
+  @keyframes float {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(-18px) rotate(3deg); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+ 
+  /* ── SECTION COMMON ── */
+  section { padding: 90px 6vw; }
+  .section-header { text-align: center; margin-bottom: 58px; }
+  .section-tag {
+    display: inline-block;
+    font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 10px;
+  }
+  .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 300;
+    color: var(--ink);
+  }
+  .section-header h2 span { color: var(--rose); font-style: italic; }
+ 
+  /* ── SKILLS STRIP ── */
+  #skills { background: linear-gradient(135deg, #f9d0d9, #ede8f9, #f5e6c8); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; max-width: 1100px; margin: auto;
+  }
+  .skill-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: 0 4px 20px rgba(197,179,230,.18);
+    transition: transform .25s, box-shadow .25s;
+  }
+  .skill-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(197,179,230,.35); }
+  .skill-card .icon { font-size: 2rem; margin-bottom: 12px; }
+  .skill-card h3 { font-size: .88rem; font-weight: 500; color: var(--muted); letter-spacing: .06em; margin-bottom: 10px; }
+  .skill-card p { font-size: .8rem; color: var(--muted); line-height: 1.65; }
+ 
+  /* ── PROJECTS ── */
+  #projects { max-width: 1100px; margin: auto; }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 26px;
+  }
+  .proj-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    border: 1px solid rgba(232,99,122,.12);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 24px rgba(200,150,58,.1);
+    transition: transform .25s, box-shadow .25s;
+    position: relative; overflow: hidden;
+  }
+  .proj-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .proj-card.c1::before { background: linear-gradient(90deg, var(--rose), var(--rose-lt)); }
+  .proj-card.c2::before { background: linear-gradient(90deg, var(--lavender), #a89bd6); }
+  .proj-card.c3::before { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); }
+  .proj-card.c4::before { background: linear-gradient(90deg, #7ecec4, #a0d9d4); }
+  .proj-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(200,150,58,.18); }
+  .proj-badge {
+    display: inline-block;
+    font-size: .68rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 50px; margin-bottom: 16px;
+  }
+  .proj-card.c1 .proj-badge { background: #fde8ec; color: var(--rose); }
+  .proj-card.c2 .proj-badge { background: var(--lav-lt); color: #7a69c0; }
+  .proj-card.c3 .proj-badge { background: var(--gold-lt); color: var(--gold); }
+  .proj-card.c4 .proj-badge { background: #e0f5f3; color: #4aadaa; }
+  .proj-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem; font-weight: 400; color: var(--ink); margin-bottom: 12px;
+  }
+  .proj-card p { font-size: .85rem; color: var(--muted); line-height: 1.7; margin-bottom: 22px; }
+  .proj-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .proj-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: .78rem; font-weight: 500; text-decoration: none;
+    padding: 7px 16px; border-radius: 50px;
+    transition: all .2s;
+  }
+  .proj-link.gh { background: var(--ink); color: #fff; }
+  .proj-link.gh:hover { background: #3d2e46; }
+  .proj-link.paper { background: var(--blush); color: var(--rose); border: 1px solid var(--rose-lt); }
+  .proj-link.paper:hover { background: var(--rose); color: #fff; }
+  .proj-link.prep { background: var(--lav-lt); color: #7a69c0; border: 1px solid var(--lavender); }
+ 
+  /* ── PUBLICATIONS ── */
+  #publications { background: linear-gradient(180deg, transparent, #f5eef8 40%, transparent); }
+  .pubs-inner { max-width: 860px; margin: auto; }
+  .pub-item {
+    display: flex; gap: 18px; align-items: flex-start;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(197,179,230,.25);
+    animation: fadeUp .5s ease both;
+  }
+  .pub-num {
+    flex: 0 0 32px; height: 32px;
+    background: var(--lav-lt); color: var(--lavender);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: .75rem; font-weight: 500; margin-top: 2px;
+  }
+  .pub-body { flex: 1; }
+  .pub-body p { font-size: .88rem; color: var(--ink); line-height: 1.6; }
+  .pub-body p strong { color: var(--rose); }
+  .pub-journal {
+    display: inline-block; margin-top: 6px;
+    font-size: .75rem; color: var(--muted); font-style: italic;
+  }
+ 
+  /* ── CONTACT ── */
+  #contact {
+    max-width: 700px; margin: auto;
+    text-align: center; padding-bottom: 120px;
+  }
+  .contact-card {
+    background: linear-gradient(135deg, #fce8ec, #ede8f9, #f5e6c8);
+    border-radius: 28px; padding: 58px 48px;
+    box-shadow: 0 8px 40px rgba(197,179,230,.3);
+  }
+  .contact-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 300; color: var(--ink); margin-bottom: 10px;
+  }
+  .contact-card p { color: var(--muted); font-size: .9rem; margin-bottom: 32px; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .contact-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; padding: 11px 24px; border-radius: 50px;
+    font-size: .84rem; font-weight: 500;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .contact-link:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+  .cl-email { background: var(--rose); color: #fff; }
+  .cl-scholar { background: var(--ink); color: #fff; }
+  .cl-github { background: var(--gold); color: #fff; }
+ 
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 28px;
+    font-size: .78rem; color: var(--muted);
+    border-top: 1px solid rgba(197,179,230,.2);
+  }
+ 
+  /* ── DIVIDER WAVE ── */
+  .wave-sep { line-height: 0; }
+  .wave-sep svg { display: block; width: 100%; }
+ 
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+ 
+  @media (max-width: 700px) {
+    nav ul { gap: 18px; }
+    .hero-inner { flex-direction: column-reverse; gap: 40px; text-align: center; }
+    .hero-btns { justify-content: center; }
+    .hero-orb { width: 200px; }
+    .contact-card { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav>
+  <span class="logo">Adela Habib</span>
+  <ul>
+    <li><a href="#projects">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+ 
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-tag">✦ Postdoctoral Fellow · Los Alamos National Lab</span>
+      <h1>Adela<br><em>Habib</em></h1>
+      <p>Computational scientist at the intersection of <strong>AI/ML</strong>, quantum chemistry, and high-performance computing — building scalable models that accelerate materials discovery and molecular simulation.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">⬡ View Research</a>
+        <a href="mailto:adelahanihabib@gmail.com" class="btn btn-secondary">✉ Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-orb">✦</div>
+  </div>
+</section>
+ 
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-tag">Core Expertise</div>
+    <h2>What I <span>Work With</span></h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="icon">🤖</div>
+      <h3>AI / Machine Learning</h3>
+      <p>Transformers, GNNs, EGNNs, Diffusion Models, Flow Matching, Autoencoders, VAEs, CNNs, RNNs, Active Learning</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="icon">⚛️</div>
+      <h3>Quantum Chemistry</h3>
+      <p>DFT (ground & excited states), MP2, Real-time density matrix dynamics, Molecular Dynamics, rt-TDDFT</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="icon">💻</div>
+      <h3>Programming</h3>
+      <p>Python (PyTorch, TensorFlow, Scikit-learn), C++, CUDA, MPI, ROCm, Unix/Linux, GPU-accelerated computing</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="icon">🔬</div>
+      <h3>Scientific Software</h3>
+      <p>VASP, Quantum Espresso, ORCA, LAMMPS, ASE, GPAW, JDFTx, OpenMM, GROMACS, DFTB+</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="icon">🚀</div>
+      <h3>HPC & Optimization</h3>
+      <p>GPU-accelerated computing on Nvidia Tensor cores & AMD matrix cores; large-scale parallel simulation</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- PROJECTS -->
+<section>
+  <div id="projects" style="max-width:1100px;margin:auto;">
+    <div class="section-header reveal">
+      <div class="section-tag">Featured Work</div>
+      <h2>Research <span>Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+ 
+      <div class="proj-card c1 reveal">
+        <span class="proj-badge">Protein Design · AI</span>
+        <h3>Geometric Deep Learning for Protein Interaction</h3>
+        <p>Developed a binding-site prediction algorithm coupling coarse surface geometry graphs with geometric transformers and protein LLMs — achieving <strong>6× speedup</strong> and ~8% accuracy improvement over state-of-the-art models for antibody–antigen identification.</p>
+        <div class="proj-links">
+          <a class="proj-link prep" href="#">Manuscript in Prep.</a>
+        </div>
+      </div>
+ 
+      <div class="proj-card c2 reveal">
+        <span class="proj-badge">Electron Dynamics · ML</span>
+        <h3>HIPPYNN: ML Models for Plasmon Dynamics</h3>
+        <p>Physics-informed GNN time-series model (PyTorch) predicting electron trajectories in silver nanoparticles — achieving a <strong>10,000× speedup</strong> over rt-TDDFT methods. Published in <em>J. Phys. Chem. A</em>.</p>
+        <div class="proj-links">
+          <a class="proj-link gh" href="https://github.com/adela-habib/hippynn/tree/development/examples/MLElectronDynamics" target="_blank">⌥ GitHub</a>
+          <a class="proj-link paper" href="https://doi.org/10.1021/acs.jpca.3c00945" target="_blank">↗ Paper</a>
+        </div>
+      </div>
+ 
+      <div class="proj-card c3 reveal">
+        <span class="proj-badge">Force Fields · MD</span>
+        <h3>ML Force Field for Ionic Liquids</h3>
+        <p>Robust graph-neural-network ML force field built with active learning and ensemble uncertainty for <strong>million-atom MD simulations</strong> of complex ionic liquids using LAMMPS.</p>
+        <div class="proj-links">
+          <a class="proj-link prep" href="#">Manuscript in Prep.</a>
+        </div>
+      </div>
+ 
+      <div class="proj-card c4 reveal">
+        <span class="proj-badge">Agentic AI · Materials</span>
+        <h3>URSA: AI Agentic Workflow for Materials Discovery</h3>
+        <p>Flexible multi-agent system closing the materials discovery loop from literature search through DFT/MD simulations to outcome review using reasoning mechanisms and scientific tooling (LAMMPS, ASE).</p>
+        <div class="proj-links">
+          <a class="proj-link gh" href="https://github.com/lanl/ursa/tree/lammps_agent" target="_blank">⌥ GitHub</a>
+          <a class="proj-link prep" href="#">Manuscript in Prep.</a>
+        </div>
+      </div>
+ 
+      <div class="proj-card c1 reveal">
+        <span class="proj-badge">HPC · Quantum</span>
+        <h3>InvFactorize: GPU-Optimized Matrix Solver</h3>
+        <p>Iterative matrix inverse solver on Nvidia Tensor cores (C++/CUDA) yielding a <strong>3× speedup</strong> over conventional solvers for scalable quantum molecular dynamics. Published in <em>J. Chem. Theory Comput.</em></p>
+        <div class="proj-links">
+          <a class="proj-link paper" href="https://doi.org/10.1021/acs.jctc.4c00584" target="_blank">↗ Paper</a>
+        </div>
+      </div>
+ 
+      <div class="proj-card c2 reveal">
+        <span class="proj-badge">Spintronics · DFT</span>
+        <h3>FeynWann: Real-Time Spin Dynamics Framework</h3>
+        <p>First-principles density matrix dynamics within relativistic DFT (MPI, CUDA, C++) for studying spin relaxation in graphene and MoS₂. Published in <em>Phys. Rev. B</em> and <em>Nature Communications</em>.</p>
+        <div class="proj-links">
+          <a class="proj-link gh" href="https://github.com/shankar1729/FeynWann" target="_blank">⌥ GitHub</a>
+          <a class="proj-link paper" href="https://doi.org/10.1038/s41467-020-17010-6" target="_blank">↗ Paper</a>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-header reveal">
+    <div class="section-tag">Scholarly Work</div>
+    <h2>Selected <span>Publications</span></h2>
+  </div>
+  <div class="pubs-inner">
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">1</div>
+      <div class="pub-body">
+        <p><strong>A. Habib</strong>, J. Finkelstein, A.M.N. Niklasson — "Efficient mixed-precision matrix factorization of the inverse overlap matrix in electronic structure calculations with AI-Hardware and GPUs"</p>
+        <span class="pub-journal">J. of Chemical Theory and Computation, 20(16), 2024</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">2</div>
+      <div class="pub-body">
+        <p><strong>A. Habib</strong>, N. Lubbers, S. Tretiak, B. Nebgen — "Machine learning models capture plasmon dynamics in Ag nanoparticles"</p>
+        <span class="pub-journal">J. of Physical Chemistry A, 127(17), 2023</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">3</div>
+      <div class="pub-body">
+        <p><strong>A. Habib</strong>, J. Xu, Y. Ping, R. Sundararaman — "Electric field and substrate dramatically accelerate spin relaxation in graphene"</p>
+        <span class="pub-journal">Physical Review B, 105(11), 115122, 2022</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">4</div>
+      <div class="pub-body">
+        <p>A.M.N. Niklasson, <strong>A. Habib</strong>, J. Finkelstein — "Susceptibility formation of density matrix perturbation theory"</p>
+        <span class="pub-journal">The Journal of Chemical Physics, 161(23), 2024</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">5</div>
+      <div class="pub-body">
+        <p>J. Xu, <strong>A. Habib</strong>, S. Kumar, F. Wu, R. Sundararaman, Y. Ping — "Spin-phonon relaxation from a universal ab initio density matrix approach"</p>
+        <span class="pub-journal">Nature Communications, 11(1), 1–10, 2020</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">6</div>
+      <div class="pub-body">
+        <p>M. Kulichenko, B. Nebgen, N. Lubbers, J.S. Smith, K. Barros, <strong>A. Habib</strong>, et al. — "Data generation for machine learning interatomic potentials and beyond"</p>
+        <span class="pub-journal">Chemical Reviews, 124(24), 13681, 2024</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">7</div>
+      <div class="pub-body">
+        <p>G. Tagliabue, J.S. DuChene, M. Abdellah, <strong>A. Habib</strong>, et al. — "Ultrafast hot-hole injection modifies hot-electron dynamics in Au/p-GaN heterostructures"</p>
+        <span class="pub-journal">Nature Materials, 2020</span>
+      </div>
+    </div>
+ 
+    <div class="pub-item reveal">
+      <div class="pub-num">8</div>
+      <div class="pub-body">
+        <p>J. Xu, <strong>A. Habib</strong>, R. Sundararaman, Y. Ping — "Giant Spin Lifetime Anisotropy and Spin-Valley Locking in Silicene and Germanene from First-Principles Density-Matrix Dynamics"</p>
+        <span class="pub-journal">Nano Letters, 21(22), 2021</span>
+      </div>
+    </div>
+ 
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a class="btn btn-primary" href="https://scholar.google.com" target="_blank">View All on Google Scholar →</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-card reveal">
+    <h2>Let's Connect ✦</h2>
+    <p>Postdoctoral Fellow · B & T Divisions · Los Alamos National Laboratory, NM<br>Open to collaborations in AI for science, materials discovery, and quantum simulation.</p>
+    <div class="contact-links">
+      <a class="contact-link cl-email" href="mailto:adelahanihabib@gmail.com">✉ adelahanihabib@gmail.com</a>
+      <a class="contact-link cl-scholar" href="https://scholar.google.com" target="_blank">◉ Google Scholar</a>
+      <a class="contact-link cl-github" href="https://github.com/adela-habib" target="_blank">⌥ GitHub</a>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  <p>© 2025 Adela Habib · Los Alamos National Laboratory · Crafted with care 🌸</p>
+</footer>
+ 
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // stagger children
+        e.target.querySelectorAll && e.target.querySelectorAll('.reveal').forEach((el, i) => {
+          el.style.transitionDelay = `${i * 0.08}s`;
+          el.classList.add('visible');
+        });
+      }
+    });
+  }, { threshold: 0.12 });
+ 
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+ 
+</body>
+</html>
